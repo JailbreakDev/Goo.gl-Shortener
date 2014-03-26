@@ -75,6 +75,14 @@
     [HUD performSelector:@selector(hide) withObject:nil afterDelay:1.0];
 }
 
+-(void)dealloc {
+    
+    [data release];
+    data = nil;
+    [HUD release];
+    HUD = nil;
+}
+
 @end
 
 @implementation UIResponder (SRShortener)
@@ -103,7 +111,8 @@
     
     SRURLShortener *shortener = [[SRURLShortener alloc] init];
     [shortener shortenURL:result.URL.absoluteString];
-
+    [shortener release];
+    [detect release];
 }
 
 
