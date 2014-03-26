@@ -1,0 +1,9 @@
+Package: com.sharedRoutine.SRShortener
+Name: Shorten Links to goo.gl Links
+Depends: actionmenu
+Architecture: iphoneos-arm
+Description: Quickly shorten your links
+Maintainer: sharedRoutine
+Author: sharedRoutine
+Section: Addons
+Version: 1.0
