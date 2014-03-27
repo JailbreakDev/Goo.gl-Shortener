@@ -81,6 +81,8 @@
     data = nil;
     [HUD release];
     HUD = nil;
+    
+    [super dealloc];
 }
 
 @end
