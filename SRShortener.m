@@ -91,7 +91,8 @@
 
 + (void)load {
     
-	[[UIMenuController sharedMenuController] registerAction:@selector(shortenURL) title:@"Goo.gl" canPerform:@selector(canShortenText)];
+	id <AMMenuItem> menuItem = [[UIMenuController sharedMenuController] registerAction:@selector(shortenURL) title:@"Goo.gl" canPerform:@selector(canShortenText)];
+    menuItem.image = [UIImage imageWithContentsOfFile:([UIScreen mainScreen].scale == 2.0f) ? @"/Library/ActionMenu/Plugins/SRShortener@2x.png" : @"/Library/ActionMenu/Plugins/SRShortener.png"];
 }
 
 - (BOOL)canShortenText {
